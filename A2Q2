@@ -1,0 +1,46 @@
+# Algorithm via which someone could walk or drive from some origin to some destination
+
+# Record the current location
+current = location()
+# Set destination
+destination = location(end)
+
+# Getting to destination
+While 'current location' != 'destination'
+  travel()
+  if destination = direction(right), then:
+    scan ()
+      turn(right)
+      walk 10 metres
+      record current location
+  else if destination = direction(left), then:
+    scan ()
+      turn(left)
+      walk 10 metres
+      record current location
+  else if destination = direction(straight) then:
+    scan ()
+      walk 10 metres
+      record current location
+
+for 'current location' = 'destination'
+  end
+  
+# Looking for obstacles and problem solving 
+function scan ()
+  if obstacle = True, then:
+    look for alternate direction()
+      if alternate direction() = True, then:
+        move direction()
+          record current location
+      if alternate direction() = False, then:
+        end
+  if obstacle = False
+    continue to next line
+
+# What to do when you reach your destination
+fuction travel()
+  if current location = destination, then:
+    end
+  else if current location != destination, then:
+    continue run
